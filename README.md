@@ -1,3 +1,3 @@
 # Enemyrain
 
-### A game made with JS to kill the ghosts
+### A game, killing the ghosts made with JS
