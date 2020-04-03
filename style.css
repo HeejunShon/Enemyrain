@@ -1,0 +1,6 @@
+#bg {
+    position: absolute;
+    background-image: url(images/bg.png);
+    width: 800px;
+    height: 600px;
+}
