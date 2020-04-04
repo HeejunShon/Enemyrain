@@ -34,6 +34,7 @@ class Enemy {
             || ( this.left < this.hero.left && this.left + this.enemy.width > this.hero.left ) ) // 우
             && ( ( pos < this.hero.top + this.hero.hero.height && pos > this.hero.top ) // 상
             || ( pos < this.hero.top && pos + this.enemy.height > this.hero.top ) ) ) { // 하 
+                
             this.die(); // 충돌 시 죽음 & 제거
             this.remove();
         }
