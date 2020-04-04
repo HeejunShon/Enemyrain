@@ -1,11 +1,11 @@
 
 // 적 생성
 const createEnemies = (hero) => {
-    //히어로 객체 전달 & 충돌 처리
     let distance = (Math.random() * 50);
     let position = Math.random() * (800 -53);
 
-    new Enemy(distance, position, hero).init();
+    new Enemy(distance, position, hero).init(); // 적 생성 (이동거리, position, Hero 전달)
+
 }
 
 
