@@ -12,13 +12,14 @@ class Hero {
     }
 
     init() {
-        console.log(this.hero);
+        console.log(this);
         this.hero.style.position = "absolute";
         this.bg.appendChild(this.hero);
     }
 
 
     move(e) { //히어로 이동 (keydown)
+        console.log(this);
         switch (e.keyCode) {
             case 37: if (this.left - this.distance > 0){//좌
                         this.left -= this.distance;

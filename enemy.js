@@ -30,8 +30,10 @@ class Enemy {
 
 
     checkCollision(pos) { // 충돌 확인
-        if( (this.left <= this.hero.left && this.left + this.enemy.width >= this.hero.left) 
-            && ( pos <= this.hero.top && pos + this.enemy.height >= this.hero.top ) ) {
+        if ( ( ( this.left + this.enemy.width > this.hero.left + this.hero.hero.width && this.left < this.hero.left + this.hero.hero.width ) // 좌
+            || ( this.left < this.hero.left && this.left + this.enemy.width > this.hero.left ) ) // 우
+            && ( ( pos < this.hero.top + this.hero.hero.height && pos > this.hero.top ) // 상
+            || ( pos < this.hero.top && pos + this.enemy.height > this.hero.top ) ) ) { // 하 
             this.die(); // 충돌 시 죽음 & 제거
             this.remove();
         }
@@ -39,7 +41,7 @@ class Enemy {
 
     move() { // 귀신 이동
         let pos = 0;
-        let iv = setInterval(() => {
+        let iv = setInterval( () => {
             let goal = 600 - this.enemy.height;
             if (pos < goal) {
                 pos++;

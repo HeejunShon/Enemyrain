@@ -18,8 +18,8 @@ const game = () => {
         hero.move(e); // 히어로 이동
     });
     
-
-    let iv = setInterval(() => { 
+    
+    let iv = setInterval( () => { 
         createEnemies(hero); // 2초 주기 적 생성
     }, 2000); 
 }
