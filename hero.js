@@ -19,9 +19,9 @@ class Hero {
 
 
     move(e) { //히어로 이동 (keydown)
-        console.log(this);
+        // console.log(this);
         switch (e.keyCode) {
-            case 37: if (this.left - this.distance > 0){//좌
+            case 37: if (this.left - this.distance > 0){ //좌
                         this.left -= this.distance;
                     }
                     else

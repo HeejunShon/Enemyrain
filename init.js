@@ -5,7 +5,6 @@ const createEnemies = (hero) => {
     let position = Math.random() * (800 -53);
 
     new Enemy(distance, position, hero).init(); // 적 생성 (이동거리, position, Hero 전달)
-
 }
 
 
@@ -18,8 +17,7 @@ const game = () => {
         hero.move(e); // 히어로 이동
     });
     
-    
-    let iv = setInterval( () => { 
+    setInterval( () => { 
         createEnemies(hero); // 2초 주기 적 생성
     }, 2000); 
 }
